@@ -79,9 +79,9 @@ dt {
   border-bottom: solid 1px var(--light-grayish-blue);
 }
 
-dt:hover {
+/* dt:hover {
   color: var(--soft-red);
-}
+} */
 
 dt::after {
   content: url("/images/icon-arrow-down.svg");
