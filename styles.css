@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+
+  --light-grayish-blue: hsl(240, 5%, 91%);
+
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+
+  display: grid;
+  place-items: center;
+
+  position: relative;
+}
+
+main {
+  width: 90%;
+  border-radius: 20px;
+  background: white;
+  position: relative;
+  padding-bottom: 50px;
+
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.image__section {
+  height: 100px;
+  background: url("/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.mobile__illustration {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translate(45%, -55%);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: var(--very-dark-desaturated-blue);
+}
+
+dl {
+  width: 85%;
+  margin: auto;
+  color: var(--very-dark-grayish-blue);
+}
+
+dt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0 15px 0;
+  cursor: pointer;
+  border-bottom: solid 1px var(--light-grayish-blue);
+}
+
+dt:hover {
+  color: var(--soft-red);
+}
+
+dt::after {
+  content: url("/images/icon-arrow-down.svg");
+  transition: 0.2s;
+}
+
+dt.active {
+  color: black;
+  font-weight: 700;
+  border: none;
+}
+
+dt.active::after {
+  transform: rotate(-180deg);
+}
+
+dd {
+  padding: 0px 0 15px 0;
+  line-height: 1.5;
+  display: none;
+}
+
+dd.active {
+  display: block;
+  border-bottom: solid 1px var(--light-grayish-blue);
+}
+
+.attribution {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--very-dark-desaturated-blue);
+}
